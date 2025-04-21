@@ -8,6 +8,8 @@ import CreateOrder, {
   action as createOrderAction,
 } from "./features/order/CreateOrder";
 import Order, { loader as orderLoader } from "./features/order/Order";
+// FOR TEST DURING LOAD SHEDDING
+// import Order from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
 
 const router = createBrowserRouter([
@@ -37,6 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/order/:orderId",
         element: <Order />,
+        // FOR TEST DURING LOAD SHEDDING
         loader: orderLoader,
         errorElement: <Error />,
       },
